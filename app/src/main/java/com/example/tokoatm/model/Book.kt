@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-@Entity(tableName = "Buku_table")
-data class Buku(
+@Entity(tableName = "Book_table")
+data class Book(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val name: String,

@@ -5,19 +5,20 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import com.example.tokoatm.model.Book
 import com.example.tokoatm.model.Buku
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface BukuDao {
-    @Query("SELECT * FROM `buku_table` ORDER BY name ASC")
-    fun getAllBuku(): Flow<List<Buku>>
+interface BookDao {
+    @Query("SELECT * FROM `book_table` ORDER BY name ASC")
+    fun getAllBook(): Flow<List<Book>>
 
     @Insert
-    suspend fun insertBuku(Buku: Buku)
+    suspend fun insertBook(Book: Book)
 
     @Delete
-    suspend fun deleteBuku(Buku: Buku)
+    suspend fun deleteBook(Book: Book)
 
-    @Update fun updateBuku(Buku: Buku)
+    @Update fun updateBook(Book: Book)
 }
